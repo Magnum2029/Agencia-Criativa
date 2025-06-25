@@ -1,15 +1,22 @@
-/* Reset básico */
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* === BASE === */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #0f0f0f;
   background: #f9f9f9;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .container {
@@ -18,8 +25,8 @@ body {
   padding: 0 1rem;
 }
 
-/* HEADER */
-header {
+/* === HEADER === */
+.header {
   background: #0f0f0f;
   color: white;
   padding: 1rem 0;
@@ -28,36 +35,37 @@ header {
   z-index: 100;
 }
 
-.header-container {
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
+.header__logo {
   font-size: 1.8rem;
   font-weight: bold;
 }
 
-/* MENU - Flexbox */
-nav ul.menu {
+.header__nav {}
+
+.menu {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
-nav ul.menu li a {
+.menu__item a {
   color: white;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
-nav ul.menu li a:hover {
+.menu__item a:hover {
   color: #f39c12;
 }
 
-.menu-toggle {
+.menu__toggle {
   display: none;
   background: transparent;
   border: none;
@@ -66,54 +74,49 @@ nav ul.menu li a:hover {
   cursor: pointer;
 }
 
-/* BANNER */
+/* === BANNER === */
 .banner {
   background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
   color: white;
   padding: 3rem 0;
-  text-align:center ;
+  text-align: center;
 }
 
-.banner h2 {
+.banner__title {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
-.banner p {
+.banner__text {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
-.banner img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* SEÇÕES */
-section {
+/* === SEÇÕES GERAIS === */
+.section {
   padding: 3rem 0;
   background: white;
   margin-bottom: 1rem;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
-.sobre p {
+/* === SOBRE === */
+.sobre__text {
   max-width: 700px;
   margin-top: 1rem;
   font-size: 1.1rem;
 }
 
-/* GRID SERVIÇOS */
-.grid-servicos {
+/* === SERVIÇOS === */
+.servicos__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
 
-.servico-item {
+.servico__item {
   background: #2575fc;
   color: white;
   padding: 1.5rem;
@@ -124,27 +127,27 @@ section {
   cursor: default;
 }
 
-.servico-item:hover {
+.servico__item:hover {
   background: #6a11cb;
 }
 
-/* DEPOIMENTOS */
-.depoimentos blockquote {
+/* === DEPOIMENTOS === */
+.depoimento__bloco {
   font-style: italic;
   border-left: 5px solid #2575fc;
   padding-left: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.depoimentos footer {
+.depoimento__autor {
   font-weight: bold;
   margin-top: 0.5rem;
   text-align: right;
   color: #555;
 }
 
-/* CONTATO */
-.contato address {
+/* === CONTATO === */
+.contato__info {
   font-style: normal;
   margin-bottom: 1.5rem;
   line-height: 1.5;
@@ -157,12 +160,12 @@ section {
   max-width: 500px;
 }
 
-.form-contato label {
+.form-contato__label {
   font-weight: 600;
 }
 
-.form-contato input,
-.form-contato textarea {
+.form-contato__input,
+.form-contato__textarea {
   padding: 0.75rem;
   font-size: 1rem;
   border-radius: 4px;
@@ -171,13 +174,13 @@ section {
   transition: border-color 0.3s ease;
 }
 
-.form-contato input:focus,
-.form-contato textarea:focus {
+.form-contato__input:focus,
+.form-contato__textarea:focus {
   border-color: #2575fc;
   outline: none;
 }
 
-.form-contato button {
+.form-contato__button {
   background: #2575fc;
   color: white;
   border: none;
@@ -189,12 +192,12 @@ section {
   transition: background-color 0.3s ease;
 }
 
-.form-contato button:hover {
+.form-contato__button:hover {
   background: #6a11cb;
 }
 
-/* FOOTER */
-footer {
+/* === FOOTER === */
+.footer {
   background: #222;
   color: white;
   padding: 1rem 0;
@@ -202,9 +205,9 @@ footer {
   font-size: 0.9rem;
 }
 
-/* RESPONSIVO */
+/* === RESPONSIVO === */
 @media (max-width: 768px) {
-  nav ul.menu {
+  .menu {
     flex-direction: column;
     background: #222;
     position: absolute;
@@ -214,29 +217,29 @@ footer {
     display: none;
   }
 
-  nav ul.menu.menu-aberto {
+  .menu.menu-aberto {
     display: flex;
   }
 
-  nav ul.menu li {
+  .menu__item {
     margin: 1rem 0;
   }
 
-  .menu-toggle {
+  .menu__toggle {
     display: block;
   }
 
-  .header-container {
+  .header__container {
     position: relative;
   }
 
-  .banner h2 {
+  .banner__title {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .banner p {
+  .banner__text {
     font-size: 1rem;
   }
 }

@@ -7,109 +7,108 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header>
-  <div class="container header-container">
-    <h1 class="logo">Agência Criativa Web</h1>
-    <nav>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <section id="home" class="banner">
-    <div class="container">
-      <h2>Bem-vindo à Agência Criativa Web</h2>
-      <p>Transformamos ideias em soluções digitais incríveis.</p>
-      <img 
-        src="https://via.placeholder.com/800x300" 
-        alt="Banner Agência Criativa" 
-        srcset="https://via.placeholder.com/400x150 400w,
-                https://via.placeholder.com/800x300 800w,
-                https://via.placeholder.com/1200x450 1200w"
-        sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
-      />
+   
+    <header class="header">
+    <div class="container header__container">
+      <h1 class="header__logo">Agência Criativa Web</h1>
+      <nav class="header__nav">
+        <ul class="menu">
+          <li class="menu__item"><a href="#home">Home</a></li>
+          <li class="menu__item"><a href="#sobre">Sobre Nós</a></li>
+          <li class="menu__item"><a href="#servicos">Serviços</a></li>
+          <li class="menu__item"><a href="#depoimentos">Depoimentos</a></li>
+          <li class="menu__item"><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="menu__toggle" aria-label="Abrir menu">&#9776;</button>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section id="sobre" class="sobre container">
-    <h2>Sobre Nós</h2>
-    <p>
-      Na Agência Criativa Web, valorizamos a inovação, criatividade e
-      excelência para entregar projetos digitais que geram resultados reais.
-    </p>
-  </section>
+  <main>
+    <section id="home" class="banner">
+      <div class="container">
+        <h2 class="banner__title">Bem-vindo à Agência Criativa Web</h2>
+        <p class="banner__text">Transformamos ideias em soluções digitais incríveis.</p>
+        <img 
+          src="https://via.placeholder.com/800x300" 
+          alt="Banner Agência Criativa" 
+          srcset="https://via.placeholder.com/400x150 400w,
+                  https://via.placeholder.com/800x300 800w,
+                  https://via.placeholder.com/1200x450 1200w"
+          sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
+        />
+      </div>
+    </section>
 
-  <section id="servicos" class="servicos container">
-    <h2>Serviços</h2>
-    <div class="grid-servicos">
-      <div class="servico-item">Design Gráfico</div>
-      <div class="servico-item">Desenvolvimento Web</div>
-      <div class="servico-item">Branding</div>
-      <div class="servico-item">Marketing Digital</div>
-      <div class="servico-item">UX/UI Design</div>
-      <div class="servico-item">Consultoria Técnica</div>
+    <section id="sobre" class="section sobre container">
+      <h2 class="section__title">Sobre Nós</h2>
+      <p class="sobre__text">
+        Na Agência Criativa Web, valorizamos a inovação, criatividade e
+        excelência para entregar projetos digitais que geram resultados reais.
+      </p>
+    </section>
+
+    <section id="servicos" class="section servicos container">
+      <h2 class="section__title">Serviços</h2>
+      <div class="servicos__grid">
+        <div class="servico__item">Design Gráfico</div>
+        <div class="servico__item">Desenvolvimento Web</div>
+        <div class="servico__item">Branding</div>
+        <div class="servico__item">Marketing Digital</div>
+        <div class="servico__item">UX/UI Design</div>
+        <div class="servico__item">Consultoria Técnica</div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="section depoimentos container">
+      <h2 class="section__title">Depoimentos</h2>
+      <blockquote class="depoimento__bloco">
+        "Trabalhar com a Agência Criativa Web foi a melhor decisão para o nosso negócio!"
+        <footer class="depoimento__autor">— João Silva</footer>
+      </blockquote>
+      <blockquote class="depoimento__bloco">
+        "Profissionais dedicados, entregaram um site moderno e funcional."
+        <footer class="depoimento__autor">— Maria Oliveira</footer>
+      </blockquote>
+    </section>
+
+    <section id="contato" class="section contato container">
+      <h2 class="section__title">Contato</h2>
+      <address class="contato__info">
+        <p>Endereço: Rua das Flores, 123 - Cidade Exemplo</p>
+        <p>Telefone: (11) 99999-9999</p>
+        <p>Email: contato@agenciacriativaweb.com</p>
+      </address>
+      <form action="#" method="post" class="form-contato">
+        <label for="nome" class="form-contato__label">Nome:</label>
+        <input type="text" id="nome" name="nome" class="form-contato__input" required />
+
+        <label for="email" class="form-contato__label">Email:</label>
+        <input type="email" id="email" name="email" class="form-contato__input" required />
+
+        <label for="mensagem" class="form-contato__label">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" class="form-contato__textarea" rows="4" required></textarea>
+
+        <button type="submit" class="form-contato__button">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>© 2025 Agência Criativa Web - contato@agenciacriativaweb.com</p>
     </div>
-  </section>
+  </footer>
 
-  <section id="depoimentos" class="depoimentos container">
-    <h2>Depoimentos</h2>
-    <blockquote>
-      "Trabalhar com a Agência Criativa Web foi a melhor decisão para o nosso negócio!"
-      <footer>— João Silva</footer>
-    </blockquote>
-    <blockquote>
-      "Profissionais dedicados, entregaram um site moderno e funcional."
-      <footer>— Maria Oliveira</footer>
-    </blockquote>
-  </section>
+  <script>
+    const menuToggle = document.querySelector('.menu__toggle');
+    const menu = document.querySelector('.menu');
 
-  <section id="contato" class="contato container">
-    <h2>Contato</h2>
-    <address>
-      <p>Endereço: Rua das Flores, 123 - Cidade Exemplo</p>
-      <p>Telefone: (11) 99999-9999</p>
-      <p>Email: contato@agenciacriativaweb.com</p>
-    </address>
-    <form action="#" method="post" class="form-contato">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container footer-container">
-    <p>© 2025 Agência Criativa Web - contato@agenciacriativaweb.com</p>
-  </div>
-</footer>
-
-<script>
-  // Script simples para o botão do menu mobile
-  const menuToggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
-
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('menu-aberto');
-  });
-</script>
-
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('menu-aberto');
+    });
+  </script>
+</body>
+</html>
 </body>
 </html>
